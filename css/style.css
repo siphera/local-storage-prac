@@ -4,4 +4,10 @@ li {
   background: grey;
   border: 4px #2a2a2a solid;
   border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  list-style-type: none;
 }
