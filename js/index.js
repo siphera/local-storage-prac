@@ -1,7 +1,8 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
-const button = document.querySelector('button');
+const button = document.querySelector('.button');
 const input = document.getElementById('item');
+const addBtn = document.querySelector('.addBtn');
 
 // conditional statement that checks if localStorage already exists so it does not reset  to an empty array every time the script runs
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
@@ -16,7 +17,19 @@ const liMaker = (text) => {
   ul.appendChild(li);
 }
 
-form.addEventListener('submit', function (e) {
+// form.addEventListener('submit', function (e) {
+//   //prevent form from default action
+//   e.preventDefault();
+//
+// // push new value to the array
+//   itemsArray.push(input.value);
+//   localStorage.setItem('items', JSON.stringify(itemsArray));
+//   liMaker(input.value);
+//   //auto erase input field
+//   input.value = "";
+// });
+
+addBtn.addEventListener('click', function (e) {
   //prevent form from default action
   e.preventDefault();
 
